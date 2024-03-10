@@ -22,6 +22,7 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> allMovies(){
+        System.out.println("requete");
         return new ResponseEntity<List<Movie>>(movieService.allMovies(),HttpStatus.OK);
     }
     @GetMapping("/id/{id}")
